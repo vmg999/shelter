@@ -5,14 +5,24 @@
 }
 :root {
   --font15: 0.9375rem;
-  --font35: 2,1875rem;
+  --font35: 2.1875rem;
 
   --width1200: 1200px;
 
   --color-primary: #f1cdb3;
   --color-light-l: #cdcdcd;
   --color-light-xl: #ffffff;
-}  
+  --color-dark-xl: #4C4C4C;
+}
+
+h3 {
+  font-size: var(--font35);
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.8125rem;
+  letter-spacing: 0.06em;
+}
 /* ------------------------------------ header --------------------------------------*/
 header {
   width: 100%;
@@ -157,4 +167,43 @@ header {
 
 .hero-img {
   width: 58.17%;
+}
+
+/* ------------------------------------ section about -----------------------------------*/
+.section-about {
+  height: 25.5rem;
+  margin-top: 5rem;
+  margin-bottom: 6.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.about-pets-img {
+  width: 22.125rem;
+  padding-left: 3.375rem;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  width: 30.25rem;
+  padding-right: 3.375rem;
+  height: 23.75rem;
+  justify-content: space-between;
+}
+.about-text-title {
+  text-align: left;
+  width: 86%;
+  height: 5.625rem;
+}
+.about-text-p {
+  font-family: Arial;
+  font-size: var(--font15);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: 0px;
+  text-align: left;
+  color: var(--color-dark-xl);
 }
