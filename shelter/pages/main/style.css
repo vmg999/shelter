@@ -6,13 +6,20 @@
 :root {
   --font15: 0.9375rem;
   --font35: 2.1875rem;
+  --font17: 1.0625rem;
 
   --width1200: 1200px;
+  --margin-top: 5rem;
+  --margin-top-p: 11.25rem;
+  --margin-bottom: 6.25rem;
 
   --color-primary: #f1cdb3;
   --color-light-l: #cdcdcd;
   --color-light-xl: #ffffff;
-  --color-dark-xl: #4C4C4C;
+  --color-light-l2: #f6f6f6;
+  --color-dark-l: #545454;
+  --color-dark-xl: #4c4c4c;
+  --color-dark-xl2: #292929;
 }
 
 h3 {
@@ -23,6 +30,24 @@ h3 {
   line-height: 2.8125rem;
   letter-spacing: 0.06em;
 }
+
+.btn {
+  font-family: Georgia;
+  font-size: var(--font17);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.375rem;
+  letter-spacing: 0.06em;
+  border: none;
+  border-radius: 6.25rem;
+  color: var(--color-dark-xl2);
+  background-color: var(--color-primary);
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
 /* ------------------------------------ header --------------------------------------*/
 header {
   width: 100%;
@@ -150,18 +175,10 @@ header {
   text-align: left;
   color: var(--color-light-l);
 }
+
 .hero-btn {
-  color: #292929;
-  background-color: var(--color-primary);
   width: 12.9375rem;
   height: 3.25rem;
-  border-radius: 100px;
-  font-family: Georgia;
-  font-size: 1.0625rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.375rem;
-  letter-spacing: 0.06em;
   text-align: center;
 }
 
@@ -172,8 +189,8 @@ header {
 /* ------------------------------------ section about -----------------------------------*/
 .section-about {
   height: 25.5rem;
-  margin-top: 5rem;
-  margin-bottom: 6.25rem;
+  margin-top: var(--margin-top);
+  margin-bottom: var(--margin-bottom);
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -206,4 +223,38 @@ header {
   letter-spacing: 0px;
   text-align: left;
   color: var(--color-dark-xl);
+}
+
+/* ------------------------------------ section pets -----------------------------------*/
+.pets {
+  background-color: var(--color-light-l2);
+  padding-top: var(--margin-top);
+  padding-bottom: var(--margin-bottom);
+}
+.pets-content {
+  height: 43.5625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pets-heading {
+  height: 5.625rem;
+  max-width: 33.33%;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--color-dark-xl);
+}
+.pets-slider {
+  height: 27.1875rem;
+  /* background-color: red; */
+}
+
+.pets-button {
+  height: 3.25rem;
+  width: 16.3125rem;
+  margin: 0 auto;
+}
+.pets-btn {
+  width: 100%;
+  height: 100%;
 }
