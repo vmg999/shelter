@@ -332,3 +332,44 @@ header {
 .card-btn:hover{
   cursor: pointer;
 }
+
+/* ------------------------------------ section help -----------------------------------*/
+.help{
+  padding-top: 8rem;
+  padding-bottom: 10rem;
+}
+
+.help-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 43.1rem;
+}
+.help-heading{
+  height: 9rem;
+  text-align: center;
+}
+.help-list{
+  width: 86%;
+  height: 28.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: safe center;
+  column-gap: 12rem;
+  row-gap: 5.2rem;
+
+}
+.list-item{
+  height: 11.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-dark-l);
+  
+}
+.item-img{
+  max-height: 6rem;
+  max-width: 6rem;
+}
