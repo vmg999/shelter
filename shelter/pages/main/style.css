@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+*:focus {
+  outline: none;
+}
+
 :root {
   font-size: 10px;
 
@@ -11,6 +16,7 @@
   --font17: 1.7rem;
 
   --letter-spacing: 0.06em;
+  --line-height: 2.4rem;
 
   --width1200: 120rem;
   --margin-top: 8rem;
@@ -18,6 +24,7 @@
   --margin-bottom: 10rem;
 
   --color-primary: #f1cdb3;
+  --color-primary-light: #FDDCC4;
   --color-light-l: #cdcdcd;
   --color-light-xl: #ffffff;
   --color-light-l2: #f6f6f6;
@@ -60,6 +67,10 @@ h4 {
 
 .btn:hover {
   cursor: pointer;
+  background-color: var(--color-primary-light);
+}
+.btn:active{
+  border: none;
 }
 
 .content {
@@ -126,7 +137,7 @@ header {
   font-size: var(--font15);
   font-style: normal;
   font-weight: 400;
-  line-height: 2.4rem;
+  line-height: var(--line-height);
   letter-spacing: 0px;
   text-align: left;
   color: var(--color-light-l);
@@ -139,7 +150,7 @@ header {
   font-size: var(--font15);
   font-style: normal;
   font-weight: 400;
-  line-height: 2.4rem;
+  line-height: var(--line-height);
   letter-spacing: 0px;
   text-align: left;
   text-decoration: none;
@@ -184,7 +195,7 @@ header {
   font-size: var(--font15);
   font-style: normal;
   font-weight: 400;
-  line-height: 2.4rem;
+  line-height: var(--line-height);
   letter-spacing: 0px;
   text-align: left;
   color: var(--color-light-l);
@@ -233,7 +244,7 @@ header {
   font-size: var(--font15);
   font-style: normal;
   font-weight: 400;
-  line-height: 2.4rem;
+  line-height: var(--line-height);
   letter-spacing: 0px;
   text-align: left;
   color: var(--color-dark-xl);
@@ -288,6 +299,7 @@ header {
 }
 .arrow:hover {
   cursor: pointer;
+  background-color: var(--color-primary);
 }
 #right {
   transform: translateY(0.17rem) rotate(180deg);
@@ -309,6 +321,10 @@ header {
   justify-content: space-evenly;
   align-items: center;
   color: var(--color-dark-l);
+  border-radius: 0.9rem;
+}
+.card:hover{
+  border: solid 1px var(--color-primary);
 }
 .card-img {
   min-height: 55.17%;
@@ -330,6 +346,8 @@ header {
 }
 .card-btn:hover {
   cursor: pointer;
+  background-color: var(--color-primary-light);
+  border: none;
 }
 
 /* ------------------------------------ section help -----------------------------------*/
@@ -421,6 +439,10 @@ header {
   flex-direction: row;
   justify-content: space-evenly;
 }
+.credit-card:hover{
+  background-color: var(--color-primary-light);
+}
+
 .credit-img {
   max-width: 3rem;
 }
@@ -433,6 +455,11 @@ header {
   display: flex;
   align-items: center;
   letter-spacing: 0.06em;
+  color: var(--color-dark-l);
+}
+.crdtnmbr {
+  text-decoration: none;
+  display: block;
   color: var(--color-dark-l);
 }
 
@@ -513,10 +540,16 @@ footer{
   flex-direction: row;
   align-items: center;
 }
+.footer-content a{
+  text-decoration: none;
+  color: var(--color-primary);
+}
+.footer-content a:hover{
+  color: var(--color-primary-light);
+}
 .pin{
   max-height: 3.2rem;
-  margin-right: 1rem;
-  transform: translate(-0.6rem);
+  margin-right: 2rem;
 }
 
 .ftr-puppy{
