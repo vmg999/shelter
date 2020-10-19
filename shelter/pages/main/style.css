@@ -446,3 +446,79 @@ header {
   text-align: left;
   color: var(--color-dark-m);
 }
+
+/* ------------------------------------ footer -----------------------------------*/
+footer{
+  height: 35.5rem;
+  background: url(../../assets/images/noise_transparent@2x.png),
+  radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+}
+
+.footer-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.footer-content h3{
+  color: var(--color-light-xl);
+}
+
+.contacts{
+  Width: 27.9rem;
+  Height: 23.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contacts h4{
+  color: var(--color-primary);
+}
+.mail{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  transform: translateY(0.3rem);
+}
+.phone{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transform: translateY(0.4rem);
+}
+.mail img{
+  max-width: 4rem;
+  margin-right: 2rem;
+}
+.phone img{
+  max-width: 4rem;
+  margin-right: 2rem;
+}
+
+
+.location{
+  Width: 30.2rem;
+  Height: 23.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.location h4{
+  color: var(--color-primary);
+  text-align: left;
+}
+.loc{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.pin{
+  max-height: 3.2rem;
+  margin-right: 1rem;
+  transform: translate(-0.6rem);
+}
+
+.ftr-puppy{
+  align-self: flex-end;
+}
