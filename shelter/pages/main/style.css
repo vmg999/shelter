@@ -12,7 +12,7 @@
 
   --letter-spacing: 0.06em;
 
-  --width1200: 1200px;
+  --width1200: 120rem;
   --margin-top: 8rem;
   --margin-top-p: 18rem;
   --margin-bottom: 10rem;
@@ -24,6 +24,7 @@
   --color-dark-l: #545454;
   --color-dark-xl: #4c4c4c;
   --color-dark-xl2: #292929;
+  --color-dark-m: #b2b2b2;
 }
 
 h3 {
@@ -61,6 +62,12 @@ h4 {
   cursor: pointer;
 }
 
+.content {
+  max-width: var(--width1200);
+  width: 100%;
+  margin: 0 auto;
+}
+
 /* ------------------------------------ header --------------------------------------*/
 header {
   width: 100%;
@@ -78,12 +85,6 @@ header {
   margin-top: 60px;
   justify-content: space-between;
   align-items: center;
-}
-
-.content {
-  max-width: var(--width1200);
-  width: 100%;
-  margin: 0 auto;
 }
 
 .logo-title h1 {
@@ -259,7 +260,6 @@ header {
 }
 .pets-slider {
   max-height: 43.5rem;
-  /* background-color: red; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -283,7 +283,7 @@ header {
   border-radius: 10rem;
   background-color: var(--color-light-xl);
 }
-.arrow-img{
+.arrow-img {
   transform: translateY(0.17rem);
 }
 .arrow:hover {
@@ -310,8 +310,7 @@ header {
   align-items: center;
   color: var(--color-dark-l);
 }
-.card-img{
-  /* width: 74%; */
+.card-img {
   min-height: 55.17%;
 }
 
@@ -329,28 +328,28 @@ header {
   line-height: 2.2rem;
   letter-spacing: 0.06em;
 }
-.card-btn:hover{
+.card-btn:hover {
   cursor: pointer;
 }
 
 /* ------------------------------------ section help -----------------------------------*/
-.help{
-  padding-top: 8rem;
-  padding-bottom: 10rem;
+.help {
+  padding-top: var(--margin-top);
+  padding-bottom: var(--margin-bottom);
 }
 
-.help-content{
+.help-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 43.1rem;
 }
-.help-heading{
+.help-heading {
   height: 9rem;
   text-align: center;
 }
-.help-list{
+.help-list {
   width: 86%;
   height: 28.1rem;
   display: flex;
@@ -358,18 +357,92 @@ header {
   justify-content: safe center;
   column-gap: 12rem;
   row-gap: 5.2rem;
-
 }
-.list-item{
+.list-item {
   height: 11.3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   color: var(--color-dark-l);
-  
 }
-.item-img{
+.item-img {
   max-height: 6rem;
   max-width: 6rem;
+}
+
+/* ------------------------------------ section donation -----------------------------------*/
+.donation {
+  background-color: var(--color-light-l2);
+  padding-top: var(--margin-top);
+  padding-bottom: var(--margin-bottom);
+}
+.donation-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 3rem;
+}
+
+.donation-dog{
+  height: 26.1rem;
+}
+
+.donation-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 38rem;
+  height: 28.4rem;
+}
+
+.donation-information h3{
+  max-width: 79%;
+}
+.inf-subh {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--font15);
+  line-height: 110%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-l);
+}
+
+.credit-card {
+  height: 4.3rem;
+  width: 34.9rem;
+  border-radius: 0.9rem;
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.credit-img {
+  max-width: 3rem;
+}
+.credit-number {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 115%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-l);
+}
+
+.legal-info {
+  font-family: Arial;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.8rem;
+  letter-spacing: 0px;
+  text-align: left;
+  color: var(--color-dark-m);
 }
