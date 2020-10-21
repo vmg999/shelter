@@ -92,11 +92,8 @@
     line-height: 1.65rem;
     letter-spacing: 0.06em;
     text-align: center;
-    
   }
 }
-
-
 
 .btn {
   font-family: Georgia;
@@ -160,7 +157,7 @@ header {
     justify-content: space-between;
     align-items: center;
   }
-  .burger{
+  .burger {
     display: none;
   }
   .navigation {
@@ -187,7 +184,7 @@ header {
     justify-content: space-between;
     align-items: center;
   }
-  .burger{
+  .burger {
     display: none;
   }
   .navigation {
@@ -215,11 +212,11 @@ header {
     align-items: center;
   }
   .navigation,
-  .menu{
+  .menu {
     display: none;
   }
 
-  .burger{
+  .burger {
     margin-top: 0.5rem;
     margin-right: 4.3rem;
   }
@@ -247,8 +244,6 @@ header {
   text-align: center;
   margin-top: 1rem;
 }
-
-
 
 .list {
   font-family: Arial;
@@ -517,7 +512,6 @@ header {
   }
   .about-pets-img {
     width: 26rem;
-
   }
 
   .about-text {
@@ -543,12 +537,7 @@ header {
     text-align: justify;
     color: var(--color-dark-xl);
   }
-
 }
-
-
-
-
 
 /* ------------------------------------ section pets -----------------------------------*/
 @media (min-width: 1280px) {
@@ -584,7 +573,7 @@ header {
     width: 99rem;
   }
 
-  #arrow320{
+  #arrow320 {
     display: none;
   }
   .card-img {
@@ -626,7 +615,7 @@ header {
   #woody {
     display: none;
   }
-  #arrow320{
+  #arrow320 {
     display: none;
   }
   .card-img {
@@ -665,18 +654,17 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* width: 58rem; */
   }
 
   #jennifer,
   #woody {
     display: none;
   }
-  .arrow768{
+  .arrow768 {
     display: none;
   }
 
-  #arrow320{
+  #arrow320 {
     width: 68%;
     height: 5.2rem;
     display: flex;
@@ -684,7 +672,7 @@ header {
     justify-content: space-between;
   }
 
-  .card h4{
+  .card h4 {
     font-size: 2rem;
   }
   .card-img {
@@ -735,7 +723,6 @@ header {
   border: solid 1px var(--color-primary);
 }
 
-
 .card-btn {
   width: 18.7rem;
   height: 5.2rem;
@@ -762,7 +749,7 @@ header {
     padding-top: var(--margin-top);
     padding-bottom: var(--margin-bottom);
   }
-  
+
   .help-heading {
     height: 9rem;
     text-align: center;
@@ -803,7 +790,7 @@ header {
     padding-top: var(--margin-top);
     padding-bottom: var(--margin-bottom);
   }
-  
+
   .help-heading {
     height: 9rem;
     text-align: center;
@@ -851,7 +838,7 @@ header {
     align-items: center;
     height: 66.1rem;
   }
-  
+
   .help-heading {
     height: 6.4rem;
     text-align: center;
@@ -865,7 +852,6 @@ header {
     column-gap: 11.1%;
     row-gap: 3rem;
   }
-
 
   .list-item {
     height: 8.7rem;
@@ -881,8 +867,6 @@ header {
     max-width: 5rem;
   }
 }
-
-
 
 /* ------------------------------------ section donation -----------------------------------*/
 @media (min-width: 1280px) {
@@ -912,48 +896,47 @@ header {
     max-width: 79%;
   }
 
-  
-.credit-card {
-  height: 4.3rem;
-  width: 34.9rem;
-  border-radius: 0.9rem;
-  background-color: var(--color-primary);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-.credit-number {
-  font-family: Georgia;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 2rem;
-  line-height: 115%;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.06em;
-  color: var(--color-dark-l);
-}
-.inf-subh {
-  font-family: Georgia;
-  font-style: normal;
-  font-weight: normal;
-  font-size: var(--font15);
-  line-height: 110%;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.06em;
-  color: var(--color-dark-l);
-}
-.legal-info {
-  font-family: Arial;
-  font-size: 1.2rem;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1.8rem;
-  letter-spacing: 0px;
-  text-align: left;
-  color: var(--color-dark-m);
-}
+  .credit-card {
+    height: 4.3rem;
+    width: 34.9rem;
+    border-radius: 0.9rem;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .credit-number {
+    font-family: Georgia;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 115%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-l);
+  }
+  .inf-subh {
+    font-family: Georgia;
+    font-style: normal;
+    font-weight: normal;
+    font-size: var(--font15);
+    line-height: 110%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-l);
+  }
+  .legal-info {
+    font-family: Arial;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.8rem;
+    letter-spacing: 0px;
+    text-align: left;
+    color: var(--color-dark-m);
+  }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .donation {
@@ -1047,7 +1030,6 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /* width: 38rem; */
     height: 28.1rem;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -1085,7 +1067,6 @@ header {
     line-height: 160%;
     display: flex;
     align-items: center;
-    /* letter-spacing: 0.06em; */
     color: var(--color-dark-l);
   }
   .legal-info {
@@ -1100,26 +1081,17 @@ header {
   }
 }
 
-
-
-
-
-
 .credit-card:hover {
   background-color: var(--color-primary-light);
 }
-
 .credit-img {
   max-width: 3rem;
 }
-
 .crdtnmbr {
   text-decoration: none;
   display: block;
   color: var(--color-dark-l);
 }
-
-
 
 /* ------------------------------------ footer -----------------------------------*/
 @media (min-width: 1280px) {
@@ -1165,11 +1137,6 @@ header {
     align-items: center;
     transform: translateY(0.4rem);
   }
-
-
-
-
-
   .ftr-puppy {
     align-self: flex-end;
   }
@@ -1220,11 +1187,6 @@ header {
     align-items: center;
     transform: translateY(0.4rem);
   }
-
-
-
-
-
   .ftr-puppy {
     align-self: flex-end;
   }
@@ -1265,9 +1227,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
   }
-  .location h3{
+  .location h3 {
     max-width: 90%;
     align-self: center;
   }
@@ -1279,7 +1240,7 @@ header {
   }
   .loc h4,
   .phone h4,
-  .mail h4{
+  .mail h4 {
     font-size: 2rem;
     line-height: 115%;
   }
@@ -1289,12 +1250,6 @@ header {
     align-items: center;
     transform: translateY(0.4rem);
   }
-  
-
-
-
-
-
   .ftr-puppy {
     align-self: flex-end;
     max-height: 26.9rem;
@@ -1304,7 +1259,6 @@ header {
 .contacts h4 {
   color: var(--color-primary);
 }
-
 .mail img {
   max-width: 4rem;
   margin-right: 2rem;
@@ -1313,7 +1267,6 @@ header {
   max-width: 4rem;
   margin-right: 2rem;
 }
-
 
 .location h4 {
   color: var(--color-primary);
@@ -1335,5 +1288,3 @@ header {
   max-height: 3.2rem;
   margin-right: 2rem;
 }
-
-
