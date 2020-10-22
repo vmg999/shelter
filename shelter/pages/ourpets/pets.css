@@ -38,6 +38,21 @@
   --color-dark-m: #b2b2b2;
 }
 
+.arrow {
+    width: 5.2rem;
+    height: 5.2rem;
+    border: solid 2px var(--color-primary);
+    border-radius: 10rem;
+    background-color: var(--color-light-xl);
+  }
+  .arrow-img {
+    transform: translateY(0.17rem);
+  }
+  .arrow:hover {
+    cursor: pointer;
+    background-color: var(--color-primary);
+  }
+
 @media (min-width: 1280px) {
   h3 {
     font-size: var(--font35);

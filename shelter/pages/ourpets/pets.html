@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="pets.css">
+    <link rel="stylesheet" href="../../assets/modal.css">
 </head>
 
 <body>
@@ -112,6 +113,41 @@
                 <button class="pag">&gt;&gt;</button>
             </div>
         </div>
+
+         <!-- modal-window  -->
+         <div class="modal-window">
+            <div class="close-button" id="close-btn">
+                <button class="arrow arr-opas">
+                    <img class="cancelsvg" src="../../assets/icons/cancel.svg" alt="">
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="modal-pets-img">
+                    <img class="mpi-img" src="" alt="pet">
+                </div>
+                <div class="modal-pets-text">
+                    <div class="mpt-header">
+                        <h3 id="modal-h3">Jennifer</h3>
+                        <h4 id="modal-h4">Dog - Labrador</h4>
+                    </div>
+                    <p class="mpt-text">
+                        Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.
+                    </p>
+                    <div>
+                        <ul class="mpt-list">
+                            <li class="mpt-list-items"><b>Age: </b><span id="age">2 months</span></li>
+                            <li><b>Inoculations: </b><span id="inoc">none</span></li>
+                            <li><b>Diseases: </b><span id="diseas">none</span></li>
+                            <li><b>Parasites: </b><span id="parasites">none</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- overlay -->
+        <div class="overlay">
+
+        </div>
     </main>
     <footer>
         <div class="content footer-content">
@@ -158,5 +194,6 @@
     </footer>
 
 </body>
-
+<script src="../../assets/pets.js"></script>
+<script src="../../assets/modal.js"></script>
 </html>
