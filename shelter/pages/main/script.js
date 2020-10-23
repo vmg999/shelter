@@ -5,7 +5,6 @@ const SLIDER = {
   size: 3,
   page: 1,
   pages: 0,
-  html: "",
   sl: document.getElementById("slider"),
   prev: document.querySelectorAll(".prev"),
   next: document.querySelectorAll(".next"),
@@ -28,26 +27,20 @@ closebutton.forEach((n) => n.addEventListener("click", closeModal));
 overlay.forEach((n) => n.addEventListener("click", closeModal));
 
 //------------------slider size-----------------------------------------
-if (document.querySelector("body").offsetWidth >= 1280) {
+if (bdw() >= 1280) {
   SLIDER.size = 3;
-} else if (
-  document.querySelector("body").offsetWidth >= 768 &&
-  document.querySelector("body").offsetWidth < 1280
-) {
+} else if (bdw() >= 768 &&  bdw() < 1280){
   SLIDER.size = 2;
 } else {
   SLIDER.size = 1;
 }
 
 window.addEventListener("resize", () => {
-  if (document.querySelector("body").offsetWidth >= 1280) {
+  if (bdw() >= 1280) {
     SLIDER.size = 3;
     SLIDER.sl.innerHTML = createSlider(SLIDER.size, SLIDER.page);
     addbtn();
-  } else if (
-    document.querySelector("body").offsetWidth >= 768 &&
-    document.querySelector("body").offsetWidth < 1280
-  ) {
+  } else if (bdw() >= 768 && bdw() < 1280){
     SLIDER.size = 2;
     SLIDER.sl.innerHTML = createSlider(SLIDER.size, SLIDER.page);
     addbtn();
@@ -102,6 +95,11 @@ request.onload = () => {
 }; //onload end
 
 request.send();
+
+//------------------functions--------------------------------
+function bdw(){
+    return document.querySelector("body").offsetWidth;
+}
 
 function createSlider(size, page) {
   slider = "";

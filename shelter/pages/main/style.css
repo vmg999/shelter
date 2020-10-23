@@ -111,6 +111,7 @@
 .btn:hover {
   cursor: pointer;
   background-color: var(--color-primary-light);
+  transform: scale(1.05);
 }
 .btn:active {
   border: none;
@@ -269,6 +270,13 @@ header {
   text-decoration: none;
   padding-bottom: 3px;
   border-bottom: 3px solid var(--color-primary);
+}
+
+.list:hover, .list-current:hover{
+  color: var(--color-primary);
+}
+.m-item:hover{
+  transform: scale(1.1);
 }
 /* ------------------------------------ section hero -----------------------------------*/
 
@@ -720,7 +728,7 @@ header {
   border-radius: 0.9rem;
 }
 .card:hover {
-  border: solid 1px var(--color-primary);
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);;
 }
 
 .card-btn {
@@ -1083,6 +1091,7 @@ header {
 
 .credit-card:hover {
   background-color: var(--color-primary-light);
+  transform: scale(1.05);
 }
 .credit-img {
   max-width: 3rem;
@@ -1283,6 +1292,7 @@ header {
 }
 .footer-content a:hover {
   color: var(--color-primary-light);
+  transform: scale(1.05);
 }
 .pin {
   max-height: 3.2rem;
