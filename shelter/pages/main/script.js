@@ -80,6 +80,9 @@ request.onload = () => {
       SLIDER.page--;
       SLIDER.sl.innerHTML = createSlider(SLIDER.size, SLIDER.page);
       addbtn();
+
+      SLIDER.sl.classList.add('slide-left');
+      setTimeout(()=>{SLIDER.sl.classList.remove('slide-left');} , 800);
     })
   );
 
@@ -90,8 +93,12 @@ request.onload = () => {
       SLIDER.page++;
       SLIDER.sl.innerHTML = createSlider(SLIDER.size, SLIDER.page);
       addbtn();
+
+      SLIDER.sl.classList.add('slide-right');
+      setTimeout(()=>{SLIDER.sl.classList.remove('slide-right');} , 800);
     })
   );
+  
 }; //onload end
 
 request.send();
@@ -127,10 +134,16 @@ function addbtn() {
 }
 
 function openModal(e) {
+
   modal[0].classList.add("active-modal");
   overlay[0].classList.add("active-overlay");
 
-  name = e.path[1].children[1].innerHTML;
+  if(navigator.userAgent.search('Firefox') != -1){
+    name = e.explicitOriginalTarget.parentNode.childNodes[1].innerHTML;
+  }else{
+    name = e.path[1].children[1].innerHTML;
+  }
+  
   i = getInd(name);
 
   modal_img.src = fullPetsList[i].img;

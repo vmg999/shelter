@@ -573,6 +573,10 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
+  }
+  .sldcnt{
+    width: 99rem;
   }
   .pets-slider-cont {
     display: flex;
@@ -581,6 +585,37 @@ header {
     width: 99rem;
   }
 
+  .slide-right {
+    animation: 0.8s slidein;
+  }
+  .slide-left {
+    animation: 0.8s slideinl;
+  }
+
+
+  @keyframes slidein {
+    from {
+      transform: translateX(100%);
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+  @keyframes slideinl {
+    from {
+      transform: translateX(-100%);
+      width: 300%; 
+    }
+  
+    to {
+      margin-right: 0%;
+      width: 100%;
+    }
+  }
   #arrow320 {
     display: none;
   }
