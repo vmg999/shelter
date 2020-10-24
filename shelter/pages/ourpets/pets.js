@@ -12,7 +12,56 @@ const SLIDER = {
   last: document.getElementById("last"),
   current: document.querySelector(".current"),
 };
+//------------------burger------------------------------
+let burger_status=0,
+    burgeroverlay = document.getElementById('burger-overlay'),
+    logo = document.getElementById('lg'),
+    logos = document.getElementById('lgs');
 
+
+if(bdw()<768){
+    
+    burger=document.getElementById('burg');
+    burgermenu=document.getElementById('burger-menu');
+    burger.addEventListener('click', ()=>{
+        if(burger_status == 0){
+            openburger();
+        }else if(burger_status == 1){
+            closeburger();
+        }
+
+    })
+}
+
+function openburger(){
+    burger_status=1;
+    burgermenu.classList.remove('burg-slide-def');
+    burgermenu.classList.add('burg-slide-in');
+    burger.classList.add('burger-rotate');
+    burgeroverlay.classList.add("active-overlay");
+
+    logo.classList.add('logo-color');
+    logos.classList.add('logo-color');
+}
+function closeburger(){
+    burger_status=0;
+    burgermenu.classList.remove('burg-slide-in');
+    burgermenu.classList.add('burg-slide-out');
+    burger.classList.add('burger-rotate-back');
+    burgeroverlay.classList.remove("active-overlay");
+
+    logo.classList.remove('logo-color');
+    logos.classList.remove('logo-color');
+
+    setTimeout(()=>{
+        burger.classList.remove('burger-rotate');
+        burger.classList.remove('burger-rotate-back');
+
+        burgermenu.classList.remove('burg-slide-in');
+        burgermenu.classList.remove('burg-slide-out');
+        burgermenu.classList.add('burg-slide-def');
+    },400);
+}
 //------------------modal------------------------------------------------
 let overlay = document.querySelectorAll(".overlay"),
   closebutton = document.querySelectorAll(".close-button"),
@@ -27,7 +76,10 @@ let overlay = document.querySelectorAll(".overlay"),
   li_parasites = document.getElementById("parasites");
 
 closebutton.forEach((n) => n.addEventListener("click", closeModal));
-overlay.forEach((n) => n.addEventListener("click", closeModal));
+overlay.forEach((n) => n.addEventListener("click", ()=>{
+    closeModal();
+    closeburger();
+}));
 
 //------------------slider size-----------------------------------------
 if (bdw() >= 1280) {
@@ -90,7 +142,7 @@ request.onload = () => {
     }
   })();
 
-  //------------------------------------
+  //------------------------------------------------------
   SLIDER.pages = fullPetsList.length / SLIDER.size;
   SLIDER.sl.innerHTML = createSlider(SLIDER.size, SLIDER.page);
   addbtn();
@@ -123,7 +175,6 @@ request.onload = () => {
       if(SLIDER.page < SLIDER.pages){
           mkrac();
       }
-
     });
 
 
@@ -141,7 +192,7 @@ request.onload = () => {
             mkrin();
           }
         if(SLIDER.page>1){
-            mklac()
+            mklac();
         }  
     })
   
@@ -229,7 +280,7 @@ function getInd(name) {
   }
 }
 
-
+//-------------pagination button functions---------------------------
 function mkrac(){
     SLIDER.next.classList.add("active");
     SLIDER.last.classList.add("active");

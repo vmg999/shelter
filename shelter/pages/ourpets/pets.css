@@ -179,6 +179,9 @@ header {
   .burger {
     display: none;
   }
+  .burger-menu{
+    display: none;
+  }
   .navigation {
     width: 36.92%;
     min-width: 44rem;
@@ -203,6 +206,9 @@ header {
     align-items: center;
   }
   .burger {
+    display: none;
+  }
+  .burger-menu{
     display: none;
   }
   .navigation {
@@ -239,6 +245,112 @@ header {
     margin-top: 0.5rem;
     margin-right: 4.3rem;
   }
+
+  /*----------- burger-------------------------- */
+
+  .burger {
+    margin-top: 0.5rem;
+    z-index: 10;
+  }
+  .burger:hover{
+    cursor: pointer;
+  }
+  .burger-rotate{
+    transform: rotate(-90deg);
+    transition: 400ms ease-in;
+  }
+  .burger-rotate-back{
+    transform: rotate(0deg);
+    transition: 400ms ease-in;
+  }
+
+  .burger-menu{
+    position: absolute;
+    top: -3rem;
+    right: 0;
+    width: 32rem;
+    height: 62.3rem;
+    background-color: var(--color-dark-xl2);
+    z-index: 5;
+  
+  }
+
+  .bmn {
+    width: 24.3rem;
+    height: 32.7rem;
+    margin: 50% auto;
+
+  }
+  .bmnul{
+    list-style: none;
+    text-align: center;
+    color: var(--color-light);
+  }
+  .bl{
+    margin-top: 4rem;
+  }
+
+  .b-list {
+    font-family: Arial;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 0px;
+    color: var(--color-light-l);
+    text-decoration: none;
+  }
+  
+  .b-list-current {
+    color: #fafafa;
+    font-family: Arial;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 0px;
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 3px solid var(--color-primary);
+  }
+
+
+  .logo{
+    z-index: 10;
+  }
+  .logo-color{
+      color: #fafafa !important;
+      transition: 1000ms;
+  }
+
+  .burg-slide-def{
+    transform: translateX(100%);
+    display: none;
+  }
+  .burg-slide-in{
+    animation: 1s bslidein;
+  }
+  .burg-slide-out{
+    animation: 1s bslideout;
+  }
+
+  @keyframes bslidein {
+    from {
+      transform: translateX(100%); 
+    }
+    to {
+      margin-left: 0%;
+    }
+  }
+  @keyframes bslideout {
+    from {
+      margin-left: 0%;
+    }
+    to {
+      transform: translateX(100%); 
+    }
+  }
+/* ----------------------------------------- */
 }
 
 .logo-title h1 {

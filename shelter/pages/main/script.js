@@ -10,6 +10,46 @@ const SLIDER = {
   next: document.querySelectorAll(".next"),
 };
 
+//------------------burger------------------------------
+let burger_status=0;
+if(bdw()<768){
+    
+    burger=document.getElementById('burg');
+    burgermenu=document.getElementById('burger-menu');
+    burger.addEventListener('click', ()=>{
+        if(burger_status == 0){
+            openburger();
+        }else if(burger_status == 1){
+            closeburger();
+        }
+
+    })
+}
+
+function openburger(){
+    burger_status=1;
+    burgermenu.classList.remove('burg-slide-def');
+    burgermenu.classList.add('burg-slide-in');
+    burger.classList.add('burger-rotate');
+    overlay[0].classList.add("active-overlay");
+}
+function closeburger(){
+    burger_status=0;
+    burgermenu.classList.remove('burg-slide-in');
+    burgermenu.classList.add('burg-slide-out');
+    burger.classList.add('burger-rotate-back');
+    overlay[0].classList.remove("active-overlay");
+
+    setTimeout(()=>{
+        burger.classList.remove('burger-rotate');
+        burger.classList.remove('burger-rotate-back');
+
+        burgermenu.classList.remove('burg-slide-in');
+        burgermenu.classList.remove('burg-slide-out');
+        burgermenu.classList.add('burg-slide-def');
+    },400);
+}
+
 //------------------modal------------------------------------------------
 let overlay = document.querySelectorAll(".overlay"),
   closebutton = document.querySelectorAll(".close-button"),
@@ -24,7 +64,10 @@ let overlay = document.querySelectorAll(".overlay"),
   li_parasites = document.getElementById("parasites");
 
 closebutton.forEach((n) => n.addEventListener("click", closeModal));
-overlay.forEach((n) => n.addEventListener("click", closeModal));
+overlay.forEach((n) => n.addEventListener("click", ()=>{
+    closeModal();
+    closeburger();
+}));
 
 //------------------slider size-----------------------------------------
 if (bdw() >= 1280) {

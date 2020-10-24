@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Our pets</title>
     <link rel="stylesheet" href="pets.css">
     <link rel="stylesheet" href="../../assets/modal.css">
 </head>
@@ -14,13 +14,29 @@
         <div class="wrapper">
             <div class="logo">
                 <div class="logo-title">
-                    <a href="../main/index.html"><h1>Cozy House</h1></a>
+                    <a href="../main/index.html"><h1 id="lg">Cozy House</h1></a>
                 </div>
-                <div class="logo-subtitle"><a href="../main/index.html">Shelter for pets in Boston</a></div>
+                <div class="logo-subtitle"><a id="lgs" href="../main/index.html">Shelter for pets in Boston</a></div>
             </div>
+            <!-- ---burger--- -->
             <nav class="burger">
-                <img src="../../assets/icons/burger-dark.svg" alt="">
+                <img id="burg" src="../../assets/icons/burger.svg" alt="">
+                   
             </nav>
+            <div id="burger-menu" class="burger-menu burg-slide-def">
+                <div class="bmn">
+                <ul class="bmnul">
+                    <li class="m-item bl"><a class="b-list" href="../main/index.html">About the shelter</a></li>
+                    <li class="m-item bl"><a class="b-list-current" href="../ourpets/pets.html">Our pets</a></li>
+                    <li class="m-item bl"><a class="b-list" href="">Help the shelter</a></li>
+                    <li class="m-item bl"><a class="b-list" href="">Contacts</a></li>
+                </ul>
+            </div>
+            </div>
+            <div id="burger-overlay" class="overlay">
+
+            </div>
+            <!-- ----------- -->
             <nav class="navigation">
                 <ul class="menu">
                     <li class="m-item"><a class="list" href="../main/index.html">About the shelter</a></li>
@@ -80,9 +96,7 @@
             </div>
         </div>
         <!-- overlay -->
-        <div class="overlay">
-
-        </div>
+        <div class="overlay"></div>
     </main>
     <footer>
         <div class="content footer-content">
@@ -129,6 +143,4 @@
     </footer>
 <script src="pets.js"></script>
 </body>
-<!-- <script src="../../assets/pets.js"></script>
-<script src="../../assets/modal.js"></script> -->
 </html>
