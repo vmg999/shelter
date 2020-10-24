@@ -32,6 +32,7 @@
   --color-light-l: #cdcdcd;
   --color-light-xl: #ffffff;
   --color-light-l2: #f6f6f6;
+  --color-light: #FAFAFA;
   --color-dark-l: #545454;
   --color-dark-xl: #4c4c4c;
   --color-dark-xl2: #292929;
@@ -585,37 +586,7 @@ header {
     width: 99rem;
   }
 
-  .slide-right {
-    animation: 0.8s slidein;
-  }
-  .slide-left {
-    animation: 0.8s slideinl;
-  }
-
-
-  @keyframes slidein {
-    from {
-      transform: translateX(100%);
-      width: 300%; 
-    }
   
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  }
-
-  @keyframes slideinl {
-    from {
-      transform: translateX(-100%);
-      width: 300%; 
-    }
-  
-    to {
-      margin-right: 0%;
-      width: 100%;
-    }
-  }
   #arrow320 {
     display: none;
   }
@@ -699,10 +670,6 @@ header {
     align-items: center;
   }
 
-  #jennifer,
-  #woody {
-    display: none;
-  }
   .arrow768 {
     display: none;
   }
@@ -720,6 +687,38 @@ header {
   }
   .card-img {
     min-height: 55.17%;
+  }
+}
+
+.slide-right {
+  animation: 0.8s slidein;
+}
+.slide-left {
+  animation: 0.8s slideinl;
+}
+
+
+@keyframes slidein {
+  from {
+    transform: translateX(100%);
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes slideinl {
+  from {
+    transform: translateX(-100%);
+    width: 300%; 
+  }
+
+  to {
+    margin-right: 0%;
+    width: 100%;
   }
 }
 
@@ -754,13 +753,14 @@ header {
 .card {
   width: 27rem;
   height: 43.5rem;
-  background-color: var(--color-light-xl);
+  background-color: var(--color-light);
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   color: var(--color-dark-l);
   border-radius: 0.9rem;
+  padding-bottom: 2rem;
 }
 .card:hover {
   box-shadow: 10px 10px 10px rgba(0,0,0,0.5);

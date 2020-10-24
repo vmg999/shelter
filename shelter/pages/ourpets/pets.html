@@ -37,80 +37,15 @@
                 <h3>Our friends who</h3>
                 <h3>are looking for a house</h3>
             </div>
-            <div class="cards-container">
-                <div class="card">
-                    <div class="card-img">
-                    <img id="katrine" src="../../assets/images/pets/pets-cat-katrine.png" alt="Katrine" />
-                    </div>
-                    <h4>Katrine</h4>
-                    <button class="card-btn">Learn more</button>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                    <img id="jenifer" src="../../assets/images/pets/pets-dog-jennifer.png" alt="Jennifer" />
-                    </div>
-                    <h4>Jennifer</h4>
-                    <button class="card-btn">Learn more</button>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                    <img id="woody" src="../../assets/images/pets/pets-dog-woody.png" alt="Woody" />
-                    </div>
-                    <h4>Woody</h4>
-                    <button class="card-btn">Learn more</button>
-                </div>
-                <div class="none320">
-                <div class="card">
-                    <div class="card-img">
-                    <img src="../../assets/images/pets/pets-dog-sophia.png" alt="">
-                    </div>
-                    <h4>Sophia</h4>
-                    <button class="card-btn">Learn more</button>
-                </div>
-                </div>
-                <div class="none320">
-                <div class="card">
-                    <div class="card-img">
-                    <img id="timmy" src="../../assets/images/pets/pets-cat-timmy.png" alt="Timmy">
-                    </div>
-                    <h4>Timmy</h4>
-                    <button class="card-btn">Learn more</button>
-                </div>
-                </div>
-                <div class="none320">
-                <div class="card">
-                    <div class="card-img">
-                    <img src="../../assets/images/pets/pets-dog-charly.png" alt="">
-                    </div>
-                    <h4>Charly</h4>
-                    <button class="card-btn">Learn more</button>
-                </div>
-                </div>
-                <div class="none768">
-                <div class="card">
-                    <div class="card-img">
-                    <img id="scarlett" src="../../assets/images/pets/pets-dog-scarlett.png" alt="">
-                    </div>
-                    <h4>Scarlett</h4>
-                    <button class="card-btn">Learn more</button>
-                </div>
-                </div>
-                <div class="none768">
-                <div class="card">
-                    <div class="card-img">
-                    <img id="freddie" src="../../assets/images/pets/pets-cat-freddie.png" alt="">
-                    </div>
-                    <h4>Freddie</h4>
-                    <button class="card-btn">Learn more</button>
-                </div>
-                </div>
+            <div class="cards-container" id="pagination">
+
             </div>
             <div class="pets-navigation">
-                <button class="pag inactive">&lt;&lt;</button>
-                <button class="pag inactive">&lt;</button>
+                <button id="first" class="pag inactive first">&lt;&lt;</button>
+                <button id="prev" class="pag inactive prev">&lt;</button>
                 <button class="pag current">1</button>
-                <button class="pag">&gt;</button>
-                <button class="pag">&gt;&gt;</button>
+                <button id="next" class="pag active next">&gt;</button>
+                <button id="last" class="pag active last">&gt;&gt;</button>
             </div>
         </div>
 
@@ -192,8 +127,8 @@
             <img src="../../assets/images/footer/footer-puppy.png" alt="footer-puppy" class="ftr-puppy">
         </div>
     </footer>
-
+<script src="pets.js"></script>
 </body>
-<script src="../../assets/pets.js"></script>
-<script src="../../assets/modal.js"></script>
+<!-- <script src="../../assets/pets.js"></script>
+<script src="../../assets/modal.js"></script> -->
 </html>

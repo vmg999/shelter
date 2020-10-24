@@ -31,13 +31,16 @@
   --color-primary-light: #fddcc4;
   --color-light-l: #cdcdcd;
   --color-light-xl: #ffffff;
+  --color-light: #FAFAFA;
   --color-light-l2: #f6f6f6;
   --color-dark-l: #545454;
   --color-dark-xl: #4c4c4c;
   --color-dark-xl2: #292929;
   --color-dark-m: #b2b2b2;
 }
-
+main{
+    overflow: hidden;
+}
 .arrow {
     width: 5.2rem;
     height: 5.2rem;
@@ -160,6 +163,7 @@ header {
   margin: 0 auto;
   position: sticky;
   top: 0;
+  background-color: rgba(255,255,255, 0.8);
 }
 @media (min-width: 1280px) {
   .wrapper {
@@ -419,12 +423,14 @@ header {
 .card {
   width: 27rem;
   height: 43.5rem;
-  background-color: var(--color-light-xl);
+  background-color: var(--color-light);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   color: var(--color-dark-l);
   border-radius: 0.9rem;
+  padding-bottom: 2rem;
 }
 .card:hover {
   box-shadow: 10px 10px 10px rgba(0,0,0,0.5);;
@@ -434,39 +440,46 @@ header {
 }
 
 .card-img {
-  height: 27rem;
-  width: 100%;
-  margin-bottom: 3rem;
+  min-height: 55.17%;
+  /* margin-bottom: 3rem; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-/* Картинки в контейнере отцентрированы по центру морды,
- а не по центру изображения, не представляю как сделать по
- другому, иначе как подгонять каждую отдельно */
-
-#katrine {
-  transform: translate(0.7rem, 1rem);
-}
-#jenifer {
-  transform: translate(0.5rem, 2rem);
-}
-#woody {
-  transform: translate(1.5rem, 1.8rem);
-}
-#timmy {
-  transform: translate(0.3rem, 1rem);
-}
-#scarlett {
-  transform: translate(1.4rem, 1.3rem);
-}
-#freddie {
-  transform: translate(0.1rem, 1.2rem);
-}
+.slide-right {
+    animation: 0.8s slidein;
+  }
+  .slide-left {
+    animation: 0.8s slideinl;
+  }
+  
+  
+  @keyframes slidein {
+    from {
+      transform: translateX(100%);
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  
+  @keyframes slideinl {
+    from {
+      transform: translateX(-100%);
+      width: 300%; 
+    }
+  
+    to {
+      margin-right: 0%;
+      width: 100%;
+    }
+  }
 
 .card-btn {
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
   width: 18.7rem;
   height: 5.2rem;
   border: solid 2px var(--color-primary);
@@ -518,10 +531,7 @@ header {
 .pag {
   width: 5.2rem;
   height: 5.2rem;
-  border: solid 2px var(--color-primary);
   border-radius: 10rem;
-  background-color: var(--color-light-xl);
-
   font-family: Georgia;
   font-size: 2rem;
   font-style: normal;
@@ -529,15 +539,22 @@ header {
   line-height: 2.3rem;
   letter-spacing: 0.06em;
   text-align: center;
-  color: var(--color-dark-xl2);
+  border: solid 2px;
 }
 .current {
   background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.active{
+ background-color: var(--color-light-xl);
+ color: var(--color-dark-xl2);
+ border-color: var(--color-primary);
 }
 .inactive {
   pointer-events: none;
   color: var(--color-light-l);
-  border: solid 2px var(--color-light-l);
+  border-color: var(--color-light-l);
+    background: none;
 }
 .pag:hover {
   cursor: pointer;
