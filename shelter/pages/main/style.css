@@ -559,6 +559,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
   }
   .pets-heading {
     height: 9rem;
@@ -573,7 +574,6 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
   }
   .sldcnt{
     width: 99rem;
@@ -763,7 +763,7 @@ header {
   border-radius: 0.9rem;
 }
 .card:hover {
-  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
 }
 
 .card-btn {

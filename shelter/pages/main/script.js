@@ -29,7 +29,7 @@ overlay.forEach((n) => n.addEventListener("click", closeModal));
 //------------------slider size-----------------------------------------
 if (bdw() >= 1280) {
   SLIDER.size = 3;
-} else if (bdw() >= 768 &&  bdw() < 1280){
+} else if (bdw() >= 768 && bdw() < 1280) {
   SLIDER.size = 2;
 } else {
   SLIDER.size = 1;
@@ -40,7 +40,7 @@ window.addEventListener("resize", () => {
     SLIDER.size = 3;
     SLIDER.sl.innerHTML = createSlider(SLIDER.size, SLIDER.page);
     addbtn();
-  } else if (bdw() >= 768 && bdw() < 1280){
+  } else if (bdw() >= 768 && bdw() < 1280) {
     SLIDER.size = 2;
     SLIDER.sl.innerHTML = createSlider(SLIDER.size, SLIDER.page);
     addbtn();
@@ -58,22 +58,39 @@ request.open("GET", "../../assets/pets.json");
 request.onload = () => {
   pets = JSON.parse(request.response);
 
-  for (let i = 0; i < 6; i++) {
-    tmpPets = pets;
+  //------randomization---------------
+  ranomization = (function () {
+    for (let i = 0; i < 6; i++) {
+      tmpPets = pets;
 
-    for (let j = pets.length; j > 0; j--) {
-      ind = Math.floor(Math.random() * j);
-      rndel = tmpPets.splice(ind, 1)[0];
-      tmpPets.push(rndel);
+      for (let j = pets.length; j > 0; j--) {
+        ind = Math.floor(Math.random() * j);
+        rndel = tmpPets.splice(ind, 1)[0];
+        tmpPets.push(rndel);
+      }
+      fullPetsList = [...fullPetsList, ...tmpPets];
     }
-    fullPetsList = [...fullPetsList, ...tmpPets];
-  }
 
+    for (let q = 6; q < fullPetsList.length; q += 6) {
+      for (let w = q; w < q + 6; w++) {
+        for (let e = q; e < q + 6; e++) {
+          if (fullPetsList[e] && fullPetsList[w].name === fullPetsList[e].name && w != e && w < e){
+            eightn = Math.ceil(w / 8);
+            strt = (eightn - 1) * 8;
+            fullPetsList.splice(strt, 0, fullPetsList.splice(fullPetsList[w], 1)[0]);
+          }
+        }
+      }
+    }
+  })();
+
+  //------------------------------------
   SLIDER.pages = fullPetsList.length / SLIDER.size;
   SLIDER.sl.innerHTML = createSlider(SLIDER.size, SLIDER.page);
   addbtn();
   //-----------------prev-next-buttons---------------------
-  SLIDER.prev.forEach((n) => n.addEventListener("click", (e) => {
+  SLIDER.prev.forEach((n) =>
+    n.addEventListener("click", (e) => {
       if (SLIDER.page == 1) {
         SLIDER.page = SLIDER.pages;
       }
@@ -81,12 +98,15 @@ request.onload = () => {
       SLIDER.sl.innerHTML = createSlider(SLIDER.size, SLIDER.page);
       addbtn();
 
-      SLIDER.sl.classList.add('slide-left');
-      setTimeout(()=>{SLIDER.sl.classList.remove('slide-left');} , 800);
+      SLIDER.sl.classList.add("slide-left");
+      setTimeout(() => {
+        SLIDER.sl.classList.remove("slide-left");
+      }, 800);
     })
   );
 
-  SLIDER.next.forEach((n) => n.addEventListener("click", (e) => {
+  SLIDER.next.forEach((n) =>
+    n.addEventListener("click", (e) => {
       if (SLIDER.page == SLIDER.pages) {
         SLIDER.page = 1;
       }
@@ -94,18 +114,19 @@ request.onload = () => {
       SLIDER.sl.innerHTML = createSlider(SLIDER.size, SLIDER.page);
       addbtn();
 
-      SLIDER.sl.classList.add('slide-right');
-      setTimeout(()=>{SLIDER.sl.classList.remove('slide-right');} , 800);
+      SLIDER.sl.classList.add("slide-right");
+      setTimeout(() => {
+        SLIDER.sl.classList.remove("slide-right");
+      }, 800);
     })
   );
-  
 }; //onload end
 
 request.send();
 
 //------------------functions--------------------------------
-function bdw(){
-    return document.querySelector("body").offsetWidth;
+function bdw() {
+  return document.querySelector("body").offsetWidth;
 }
 
 function createSlider(size, page) {
@@ -130,20 +151,21 @@ function createCard(i) {
 
 //----------modal window funcs---------------
 function addbtn() {
-  document.querySelectorAll(".card-btn").forEach((n) => n.addEventListener("click", openModal)); //add modal button
+  document
+    .querySelectorAll(".card-btn")
+    .forEach((n) => n.addEventListener("click", openModal)); //add modal button
 }
 
 function openModal(e) {
-
   modal[0].classList.add("active-modal");
   overlay[0].classList.add("active-overlay");
 
-  if(navigator.userAgent.search('Firefox') != -1){
+  if (navigator.userAgent.search("Firefox") != -1) {
     name = e.explicitOriginalTarget.parentNode.childNodes[1].innerHTML;
-  }else{
+  } else {
     name = e.path[1].children[1].innerHTML;
   }
-  
+
   i = getInd(name);
 
   modal_img.src = fullPetsList[i].img;
