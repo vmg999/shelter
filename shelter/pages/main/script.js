@@ -11,19 +11,21 @@ const SLIDER = {
 };
 
 //------------------burger------------------------------
-let burger_status=0;
-if(bdw()<768){
-    
+let burger_status=0,
+    burgerIsSet=0;
+
+function createBurger(){
     burger=document.getElementById('burg');
     burgermenu=document.getElementById('burger-menu');
-    burger.addEventListener('click', ()=>{
+    burger.addEventListener('click', (e)=>{
         if(burger_status == 0){
             openburger();
         }else if(burger_status == 1){
             closeburger();
         }
-
+        
     })
+    burgerIsSet=1;
 }
 
 function openburger(){
@@ -49,6 +51,17 @@ function closeburger(){
         burgermenu.classList.add('burg-slide-def');
     },400);
 }
+
+if (bdw() < 768){
+    createBurger();
+ }
+ window.addEventListener("resize", (e) => {
+     if(e.target.innerWidth<768){
+         if(burgerIsSet == 0){
+             createBurger();
+         }
+     }
+ });
 
 //------------------modal------------------------------------------------
 let overlay = document.querySelectorAll(".overlay"),

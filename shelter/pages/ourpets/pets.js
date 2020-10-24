@@ -13,24 +13,28 @@ const SLIDER = {
   current: document.querySelector(".current"),
 };
 //------------------burger------------------------------
-let burger_status=0,
+let burgerIsSet=0,
+    burger_status=0,
     burgeroverlay = document.getElementById('burger-overlay'),
     logo = document.getElementById('lg'),
     logos = document.getElementById('lgs');
 
-
-if(bdw()<768){
-    
+function createBurger(){
     burger=document.getElementById('burg');
     burgermenu=document.getElementById('burger-menu');
-    burger.addEventListener('click', ()=>{
+    burger.addEventListener('click', (e)=>{
         if(burger_status == 0){
+            // console.log(e);
+            console.log('op');
             openburger();
         }else if(burger_status == 1){
             closeburger();
+            // console.log(e);
+            console.log('cls');
         }
-
+        
     })
+    burgerIsSet=1;
 }
 
 function openburger(){
@@ -62,6 +66,19 @@ function closeburger(){
         burgermenu.classList.add('burg-slide-def');
     },400);
 }
+if (bdw() < 768){
+   createBurger();
+}
+window.addEventListener("resize", (e) => {
+    // console.log(e.target.innerWidth);
+    if(e.target.innerWidth<768){
+        if(burgerIsSet == 0){
+            createBurger();
+        }
+    }
+    
+});
+
 //------------------modal------------------------------------------------
 let overlay = document.querySelectorAll(".overlay"),
   closebutton = document.querySelectorAll(".close-button"),
