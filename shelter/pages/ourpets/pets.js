@@ -230,15 +230,23 @@ function openModal(e) {
   (document.querySelector('html')).style.overflow="hidden";
 
   if (navigator.userAgent.search("Firefox") != -1) {
-    name = e.explicitOriginalTarget.parentNode.childNodes[1].innerHTML;
+    pet_name = e.explicitOriginalTarget.parentNode.childNodes[1].innerHTML;
   } else {
-    name = e.path[1].children[1].innerHTML;
+    if(e.target.className == 'card') {
+      pet_name = e.srcElement.children[1].innerHTML;
+    }
+    if(e.target.className == 'card-img') {
+      pet_name = e.srcElement.alt
+    }
+    if(e.target.className == 'card-btn') {
+      pet_name = e.target.previousElementSibling.innerHTML
+    }
   }
 
-  i = getInd(name);
+  i = getInd(pet_name);
 
   modal_img.src = fullPetsList[i].img;
-  modal_h3.innerHTML = name;
+  modal_h3.innerHTML = pet_name;
   modal_h4.innerHTML = fullPetsList[i].type + " - " + fullPetsList[i].breed;
   mpt_text.innerHTML = fullPetsList[i].description;
   li_age.innerHTML = fullPetsList[i].age;
